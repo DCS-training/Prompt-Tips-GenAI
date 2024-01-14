@@ -1,0 +1,45 @@
+---
+title: "Propmting for Gen-AI"
+subtitle: "Basics of Prompt Engineering for LLMs"
+format: 
+  revealjs:
+    slide-number: true
+    footer: <https://github.com/DCS-training/Prompt-Tips-GenAI>
+    logo: images/DCSlogo.png
+    css: styles.css
+---
+
+# Welcome: General Agenda
+
+Part 1: Introduction to Gen-AI and Prompt Engineering
+
+-   Welcome and Overview
+-   What are Gen-AI Tools or LLMs?
+-   Importance of LLM Settings
+-   Basics and elements of Prompting.
+-   Key Components of Prompt Engineering
+
+---
+
+**Short Break**
+
+Part 2: Techniques in Prompt Engineering
+
+- General Tips for Designing Prompts
+- Strategies for Effective Prompting
+- Group hands-on: Prompt Formulation Practice
+- Techniques in Advanced Prompt Formulation
+
+---
+
+Part 3: Exploring ChatGPT with Data Analytics
+
+- Brief Introduction to ChatGPT Plugins for Data Analytics
+
+**Closing**
+
+- Feedback and Closing Remarks
+
+# What are Gen-AI Tools or LLMs?
+
+
