@@ -21,7 +21,8 @@ Course slides are prepared as a mixture of different related sources but mainly 
 ### Part 1: Introduction to Gen-AI and Prompt Engineering
 - Welcome and Overview
 - What are Gen-AI Tools or LLMs?
-- Basics and elements of Prompting
+- Importance of LLM Settings
+- Basics and elements of Prompting. 
 - Key Components of Prompt Engineering
 
 ### Short Break
