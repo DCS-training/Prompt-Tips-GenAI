@@ -8,3 +8,33 @@ Course is designed for giving a general understanding of the efficient use of Ge
 ## Related keywords
 
 *Generative Artificial Intelligence (Gen-AI)*, *Large Language Models (LLMs)*, *ChatGPT*
+
+## Duration
+2 Hours
+
+---
+### Part 1: Introduction to Gen-AI and Prompt Engineering
+- Welcome and Overview
+- What are Gen-AI Tools or LLMs?
+- Basics and elements of Prompting
+- Key Components of Prompt Engineering
+
+### Short Break
+
+### Part 2: Techniques in Prompt Engineering 
+- General Tips for Designing Prompts
+- Strategies for Effective Prompting
+- Group hands-on: Prompt Formulation Practice
+- Techniques in Advanced Prompt Formulation
+
+### Part 3: Exploring ChatGPT with Data Analytics
+- Brief Introduction to ChatGPT Plugins for Data Analytics
+
+### Closing
+- Feedback and Closing Remarks
+
+---
+
+## Additional Notes
+- Hands-on components are included in various parts of the session.
+- The agenda is subject to slight modifications to better suit the pace and interaction level of participants.
