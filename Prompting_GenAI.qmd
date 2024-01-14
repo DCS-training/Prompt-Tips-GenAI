@@ -1,12 +1,11 @@
 ---
-title: "Propmting for Gen-AI"
+title: "Prompting for Gen-AI"
 subtitle: "Basics of Prompt Engineering for LLMs"
 format: 
   revealjs:
     slide-number: true
     footer: <https://github.com/DCS-training/Prompt-Tips-GenAI>
     logo: images/DCSlogo.png
-    css: styles.css
 ---
 
 # Welcome: General Agenda
