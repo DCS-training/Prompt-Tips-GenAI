@@ -5,6 +5,14 @@ This is the Efficient Prompting for Generative AI Tools training course material
 
 Course is designed for giving a general understanding of the efficient use of Gen-AI tools focusing on the importance of Prompting (Prompt Engineering). Starting with a brief introduction of Gen-AI tools for practical reasons, different prompt strategies will be discussed by doing some interactive examples. The content of the workshop will cover the concepts of ‘Introduction to Gen-AI tools’, ‘Prompt Engineering’, ‘Prompt formulation’ and ‘Effective Prompting’. Additionally, certain plug-ins in ChatGPT with Data Analytics feature will be explored with good prompt practices. Course is aimed to be delivered in a 2-hour session with certain hands-on components and interactions with audience.
 
+## Main Course sources 
+
+Course slides are prepared as a mixture of different related sources but mainly focusing on the followings;
+
+[Prompt engineering by OpenAI](https://platform.openai.com/docs/guides/prompt-engineering)
+
+[Prompt Engineering Guide](https://www.promptingguide.ai/)
+
 ## Related keywords
 
 *Generative Artificial Intelligence (Gen-AI)*, *Large Language Models (LLMs)*, *ChatGPT*
@@ -34,3 +42,6 @@ Course is designed for giving a general understanding of the efficient use of Ge
 ## Additional Notes
 - Hands-on components are included in various parts of the session.
 - The agenda is subject to slight modifications to better suit the pace and interaction level of participants.
+- **User Preferences on Related Tools:**
+  * The course will include demonstrations and use cases involving popular LLMs such as ChatGPT or its competitors. For the participants who are not able to use recent version of ChatGPT, there will be open-source platform suggestions to use
+  * Disclaimer: Different tools can require different prompt strategies in general!
