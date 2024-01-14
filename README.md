@@ -9,9 +9,6 @@ Course is designed for giving a general understanding of the efficient use of Ge
 
 *Generative Artificial Intelligence (Gen-AI)*, *Large Language Models (LLMs)*, *ChatGPT*
 
-## Duration
-2 Hours
-
 ---
 ### Part 1: Introduction to Gen-AI and Prompt Engineering
 - Welcome and Overview
@@ -32,7 +29,6 @@ Course is designed for giving a general understanding of the efficient use of Ge
 
 ### Closing
 - Feedback and Closing Remarks
-
 ---
 
 ## Additional Notes
