@@ -4,6 +4,7 @@ subtitle: "Basics of Prompt Engineering for LLMs"
 format: 
   revealjs:
     slide-number: true
+    transition: slide
     footer: <https://github.com/DCS-training/Prompt-Tips-GenAI>
     logo: images/DCSlogo.png
 ---
@@ -59,7 +60,82 @@ Part 3: Exploring ChatGPT with Data Analytics
 ![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=50%}
 :::
 
-# Evolutionary tree of modern LLMs traces
+# Modern LLMs traces
 
-![](images/LLMtrees.png){fig-align="center" width=60%}
+![](images/LLMtrees.png){fig-align="center" width=50%}
 Image Credit: [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
+
+
+# About Prompt Engineering
+
+- This is mainly about writing efficient prompts by considering it as an iterative process in general. 
+
+- "Prompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models (LMs) for a wide variety of applications and research topics."
+
+- It allows us to better understand the capabilities and limitations of large language models (LLMs)
+
+- Researchers generally use prompt engineering to improve the capacity of the considered LLMs on a wide range of tasks including (but not limited) to question answering and arithmetic reasoning.
+
+# Importance of LLM settings 
+
+* When designing and writing prompts, we typically interact with the LLM via an API or more friendly interfaceas such as ChatGPT etc.
+
+* It is crucial to know configured model parameters and how they work in general!
+  
+**What about these main parameters ?**
+
+---
+
+# LLM Model Parameters
+
+- *Temperature*
+  - **Low:** Produces deterministic, factual outputs. Ideal for fact-based Q&A type tasks .
+  - **High:** Encourages creative, diverse responses. Useful for creative tasks like creating poetry or story.
+
+- *Top P (Nucleus Sampling)*
+  - **Low:** Yields exact, confident answers. Best for factual responses.
+  - **High:** Offers diverse outputs, considering less likely words. Great for varied responses.
+
+---
+
+- *Max Length*
+  - Controls output token count. Helps avoid overly long or irrelevant responses, managing cost.
+
+- *Stop Sequences*
+  - Strings that terminate token generation. Used to limit response length and structure.
+
+- *Frequency Penalty*: Penalizes repeated tokens based on frequency. Reduces word repetition in responses.
+
+- *Presence Penalty*: Penalizes all repeated tokens equally. Prevents phrase repetition. Adjust for creativity or focus.
+  
+---
+
+::: {.callout-note}
+The general recommendation is to alter **temperature** or **Top P** but **not both**.
+:::
+  
+::: {.callout-note}
+Similar to temperature and Top P, the general recommendation is to alter the **frequency** or **presence** penalty but **not both**
+:::
+
+::: {.callout-warning}
+Keep in mind that your results may vary depending on the which LLM or which version of LLM you use.
+:::
+
+# Basic Template 
+
+"You can achieve a lot with simple prompts, but the quality of results depends on how much information you provide it and how well-crafted the prompt is."
+
+- **Prompt**: What we want from LLM in general
+
+- **Output**: What we get from the LLM 
+
+::: {.callout-note}
+A prompt can contain information like the instruction or question you are passing to the model and include other details such as context, inputs, or examples
+:::
+
+::: {.callout-tip}
+It is possible to use such elements when they are necessary to guide the LLM more effectively, for the purpose of output improvement!
+:::
+
+# Elements of a Prompt
