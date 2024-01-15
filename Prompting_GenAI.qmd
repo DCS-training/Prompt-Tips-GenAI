@@ -39,6 +39,27 @@ Part 3: Exploring ChatGPT with Data Analytics
 
 - Feedback and Closing Remarks
 
-# What are Gen-AI Tools or LLMs?
+# Intersection of different fields
 
+![](images/GenAI_Venn.png){fig-align="center" width=50%}
 
+# Huge Public Interest
+
+![](images/GenAIstorm.png){fig-align="center" width=50%}
+
+# What is the power behind it ?
+
+![](images/GPT_Compower.png){fig-align="center" width=75%}
+
+# Main advancement since 2017 ?
+
+::: {layout-ncol=2}
+![Transformers](images/Transformers_Time.png){fig-align="center" width=50%}
+
+![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=50%}
+:::
+
+# Evolutionary tree of modern LLMs traces
+
+![](images/LLMtrees.png){fig-align="center" width=60%}
+Image Credit: [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
