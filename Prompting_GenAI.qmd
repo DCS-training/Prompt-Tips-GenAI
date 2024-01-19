@@ -65,6 +65,9 @@ Part 3: Exploring ChatGPT with Data Analytics
 ![](images/LLMtrees.png){fig-align="center" width=50%}
 Image Credit: [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
 
+# Based vs Fine Tuned LLM 
+
+![](images/DeepL_LLMtypes.png){fig-align="center" width=50%}
 
 # About Prompt Engineering
 
@@ -75,6 +78,10 @@ Image Credit: [Different development paths of LLMs](https://www.interconnects.ai
 - It allows us to better understand the capabilities and limitations of large language models (LLMs)
 
 - Researchers generally use prompt engineering to improve the capacity of the considered LLMs on a wide range of tasks including (but not limited) to question answering and arithmetic reasoning.
+
+# Iterating is the key!
+
+![](images/DeepL_IterPrompt.png){fig-align="center" width=50%}
 
 # Importance of LLM settings 
 
@@ -139,3 +146,156 @@ It is possible to use such elements when they are necessary to guide the LLM mor
 :::
 
 # Elements of a Prompt
+
+Any prompt can include the following elements;
+
+- **Instruction**: a specific task or instruction you want the model to perform
+
+- **Context**: external information or additional context that can steer the model to better responses
+
+- **Input Data**: the input or question that we are interested to find a response for
+
+- **Output Indicator** the type or format of the output.
+
+::: {.callout-warning}
+No need all the four elements for a prompt and the format depends on the task at hand.
+:::
+
+# Some Examples 
+
+- Text Summarization
+
+- Information Extraction
+
+- Question Answering
+
+- Text Classification
+
+- Conversation
+
+- Code Generation
+
+- Reasoning
+
+::: {.callout-note}
+Prompt: Classify the text into neutral, negative or positive. 
+
+Text: I think the food was okay. 
+Sentiment: 
+:::
+
+# OpenAI suggested strategies
+
+- Write clear instructions
+
+- Provide reference text
+
+- Split complex tasks into simpler subtasks
+
+- Give the model time to "think"
+
+- Use external tools
+
+- Test changes systematically
+
+::: {.callout-note}
+For each strategy we can see various given tactics 
+:::
+
+# Write clear instructions
+
+- [Include details in your query to get more relevant answers](https://platform.openai.com/docs/guides/prompt-engineering/tactic-include-details-in-your-query-to-get-more-relevant-answers)
+ * This is like feeding LLM with important details or context
+
+- [Ask the model to adopt a persona](https://platform.openai.com/docs/guides/prompt-engineering/tactic-ask-the-model-to-adopt-a-persona)
+  * You act as a workshop tutor!
+
+- [Use delimiters to clearly indicate distinct parts of the input](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
+  * specify the related content explicitly, ie. <article> insert first article here </article>
+
+- [Specify the steps required to complete a task](https://platform.openai.com/docs/guides/prompt-engineering/tactic-specify-the-steps-required-to-complete-a-task)
+  * Spliting the task into smaller parts  
+
+- [Provide examples](https://platform.openai.com/docs/guides/prompt-engineering/tactic-provide-examples)
+
+- [Specify the desired length of the output](https://platform.openai.com/docs/guides/prompt-engineering/tactic-specify-the-desired-length-of-the-output)
+
+# Provide reference text
+
+- [Instruct the model to answer using a reference text](https://platform.openai.com/docs/guides/prompt-engineering/tactic-instruct-the-model-to-answer-using-a-reference-text)
+  * Adding extra information
+
+- [Instruct the model to answer with citations from a reference text](https://platform.openai.com/docs/guides/prompt-engineering/tactic-instruct-the-model-to-answer-with-citations-from-a-reference-text)
+  * Adding external source
+
+# Split complex tasks into simpler subtasks
+
+- [Use intent classification to identify the most relevant instructions for a user query](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-intent-classification-to-identify-the-most-relevant-instructions-for-a-user-query)
+
+- [For dialogue applications that require very long conversations, summarize or filter previous dialogue](https://platform.openai.com/docs/guides/prompt-engineering/tactic-for-dialogue-applications-that-require-very-long-conversations-summarize-or-filter-previous-dialogue)
+
+- [Summarize long documents piecewise and construct a full summary recursively](https://platform.openai.com/docs/guides/prompt-engineering/tactic-summarize-long-documents-piecewise-and-construct-a-full-summary-recursively)
+
+# Give models time to "think"
+
+- [Instruct the model to work out its own solution before rushing to a conclusion](https://platform.openai.com/docs/guides/prompt-engineering/tactic-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion)
+
+- [Use inner monologue or a sequence of queries to hide the model's reasoning process](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-inner-monologue-or-a-sequence-of-queries-to-hide-the-model-s-reasoning-process)
+
+- [Ask the model if it missed anything on previous passes](https://platform.openai.com/docs/guides/prompt-engineering/tactic-ask-the-model-if-it-missed-anything-on-previous-passes)
+
+# Use external tools
+
+- [Use embeddings-based search to implement efficient knowledge retrieval](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-embeddings-based-search-to-implement-efficient-knowledge-retrieval)
+ * More technical, such as RAG method
+
+- [Use code execution to perform more accurate calculations or call external APIs](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-code-execution-to-perform-more-accurate-calculations-or-call-external-apis)
+ * Such as guiding LLM to do something with another tool!
+
+- [Give the model access to specific functions](https://platform.openai.com/docs/guides/prompt-engineering/tactic-give-the-model-access-to-specific-functions)
+
+# Test changes systematically
+
+Evaluation procedures (or "evals") are useful for optimizing system designs
+
+- [Evaluate model outputs with reference to gold-standard answers](https://platform.openai.com/docs/guides/prompt-engineering/tactic-evaluate-model-outputs-with-reference-to-gold-standard-answers)
+
+::: {.callout-note}
+More advanced prompting engineering techniques that allow us to achieve more complex tasks and improve reliability and performance of LLMs
+:::
+
+# Risks & Misuses
+
+- [Adversarial Prompting](https://www.promptingguide.ai/risks/adversarial)
+
+- [Factuality](https://www.promptingguide.ai/risks/factuality)
+
+- [Biases](https://www.promptingguide.ai/risks/biases)
+
+# Some Advanced Methods 
+
+These are some techniques from the open book of [Prompt Engineering Guide](https://www.promptingguide.ai/)
+
+Including but not limited to,
+
+- Zero-Shot Prompting
+
+- **Few-Shot Prompting**
+
+- Chain-of-Thought Prompting
+
+- Generated Knowledge Prompting
+
+- PAL (Program-Aided Language Models)
+
+- **[Retrieval Augmented Generation (RAG)](https://arxiv.org/abs/2312.10997)**
+
+--- 
+
+# Further Resources on Prompting 
+
+- [OpenAI Cookbook](https://cookbook.openai.com/)
+
+- [Prompting libraries & tools](https://cookbook.openai.com/articles/related_resources)
+
+
