@@ -21,14 +21,12 @@ Part 1: Introduction to Gen-AI and Prompt Engineering
 
 ---
 
-**Short Break**
-
 Part 2: Techniques in Prompt Engineering
 
 - General Tips for Designing Prompts
 - Strategies for Effective Prompting
-- Group hands-on: Prompt Formulation Practice
 - Techniques in Advanced Prompt Formulation
+- Group hands-on: Prompt Formulation Practice
 
 ---
 
@@ -57,7 +55,7 @@ Part 3: Exploring ChatGPT with Data Analytics
 ::: {layout-ncol=2}
 ![Transformers](images/Transformers_Time.png){fig-align="center" width=50%}
 
-![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=50%}
+![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=45%}
 :::
 
 # Modern LLMs traces
@@ -68,6 +66,38 @@ Image Credit: [Different development paths of LLMs](https://www.interconnects.ai
 # Based vs Fine Tuned LLM 
 
 ![](images/DeepL_LLMtypes.png){fig-align="center" width=50%}
+
+# Some LLM news (rapidly changing!)
+
+- Multimodality already for some!
+
+- As apps (ChatGPT android)
+
+- Specific: ChatGPT can see, hear and speak (''ChatGPT can now see, hear, and speak. Rolling out over next two weeks, Plus users will be able to have voice conversations with ChatGPT (iOS \& Android) and to include images in conversations
+
+- [Custom GPTs](https://openai.com/blog/introducing-gpts) are released already! 
+
+- Upcoming: "[Gemini](https://deepmind.google/technologies/gemini/#introduction) is built from the ground up for multimodality — reasoning seamlessly across text, images, video, audio, and code."
+
+- Interaction between different LLM agents, such as Microsoft [Autogen](https://www.microsoft.com/en-us/research/project/autogen/)
+
+**What about available tools that we can play with ?**
+
+# Which tool we can use? 
+
+- OpenAI: **GPT-3.5** or recent version **GPT4** if you have paid membership
+  * There will be some examples from playground
+  * You will see some examples in a python code for later experiments
+
+- Google: **Bard** now, **Gemini** later 
+
+- Antrophic: **Claude-2**
+
+- Meta: **Llama-2** (70B) via a specific [website](https://www.llama2.ai/)
+
+- Mistral: Check out their [platform as open-source alternative](https://mistral.ai/product/)
+
+- Recently: [Microsoft Copilot](https://copilot.microsoft.com/) is available for university! announced as *Protected Mode for users from educational institutions*
 
 # About Prompt Engineering
 
@@ -129,13 +159,15 @@ Similar to temperature and Top P, the general recommendation is to alter the **f
 Keep in mind that your results may vary depending on the which LLM or which version of LLM you use.
 :::
 
+Some [further details from OpenAI](https://platform.openai.com/docs/api-reference/chat/object)
+
 # Basic Template 
 
 "You can achieve a lot with simple prompts, but the quality of results depends on how much information you provide it and how well-crafted the prompt is."
 
-- **Prompt**: What we want from LLM in general
+- **Prompt**: What we want from LLM
 
-- **Output**: What we get from the LLM 
+- **Output**: What we will get from the LLM 
 
 ::: {.callout-note}
 A prompt can contain information like the instruction or question you are passing to the model and include other details such as context, inputs, or examples
@@ -176,6 +208,8 @@ No need all the four elements for a prompt and the format depends on the task at
 - Code Generation
 
 - Reasoning
+
+- $\ldots$
 
 ::: {.callout-note}
 Prompt: Classify the text into neutral, negative or positive. 
@@ -282,7 +316,7 @@ Including but not limited to,
 
 - **Few-Shot Prompting**
 
-- Chain-of-Thought Prompting
+- **Chain-of-Thought Prompting**
 
 - Generated Knowledge Prompting
 
@@ -291,6 +325,63 @@ Including but not limited to,
 - **[Retrieval Augmented Generation (RAG)](https://arxiv.org/abs/2312.10997)**
 
 --- 
+
+# Few-shot learning 
+
+- Generally, LLms are capable of performing some tasks "zero-shot." Just asking what we want simply
+
+- When zero-shot doesn't work, it's recommended to provide demonstrations or examples in the prompt which leads to few-shot prompting
+
+- This technique enables in-context learning where we provide demonstrations in the prompt to improve the model performance.
+
+- For more difficult tasks, we can experiment with increasing the demonstrations (e.g., 3-shot, 5-shot, 10-shot, etc.)
+
+::: {.callout-warning}
+It is better than zero-shot to some extent but may fail especially when dealing with more complex reasoning tasks!
+:::
+
+--- 
+
+# Chain of Thought (CoT)
+
+- This method has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
+
+- Chain-of-thought (CoT) prompting enables complex reasoning capabilities through intermediate reasoning steps ([Wei et al. (2022)](https://arxiv.org/abs/2201.11903))
+
+- It is possible to combine it with few-shot prompting to get better results on more complex tasks
+
+- You can see different types such as Zero- or Few-shot COT Prompting or Automatic Chain-of-Thought (Auto-CoT)
+
+# Simple Example on (CoT)
+
+![](images/cot_image.webp){fig-align="center" width=60%}
+
+# Getting more technical: RAGs
+
+- For more complex and knowledge-intensive tasks, it's possible to build a language model-based system that accesses external knowledge sources
+
+- This is a common and one of the cheapest option to reduce the problem of "hallucination" in general
+
+- RAG combines an information retrieval component with a text generator model.
+
+- RAG allows language models to bypass retraining, enabling access to the latest information for generating reliable outputs via retrieval-based generation
+
+---
+
+# Workflow of RAG
+
+![](images/RAGs.png){fig-align="center" width=75%}
+
+Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_cases/question_answering/)
+
+---
+
+![](images/RAGs_2.png){fig-align="center" width=75%}
+
+Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_cases/question_answering/)
+
+---
+
 
 # Further Resources on Prompting 
 
