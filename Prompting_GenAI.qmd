@@ -9,7 +9,7 @@ format:
     logo: images/DCSlogo.png
 ---
 
-# Welcome: General Agenda
+# General Agenda
 
 Part 1: Introduction to Gen-AI
 
@@ -41,17 +41,14 @@ Part 3: Exploring ChatGPT with Data Analytics
 
 # A Little about me
 
-I am University Teacher in Statistics at the School of Mathematics, at the University of Edinburgh since 2022. Previously, I held postdoc positions at Padova University (2021) and KU Leuven (2020), after completing my PhD at Middle East Technical University in 2018. Recently deserved my Fellowship of Higher Education Academics (FHEA) in 2023. 
+I am University Teacher in Statistics at the School of Mathematics, at the University of Edinburgh since 2022. Recently deserved my Fellowship of Higher Education Academics (FHEA) in 2023. 
 
 - As a member of teaching team in the school of Math
-  * TEMSE seminars co-organiser
-  * Leading Gen-AI related discussions
+  * TEMSE seminars co-organiser and Leading Gen-AI related discussions
   
 - Being a part of EdinbR local group and RSS Edinburgh local group
 
-- New contributor in pair-programming club
-
-# Intersection of different fields
+# Intersection of fields
 
 ![](images/GenAI_Venn.png){fig-align="center" width=50%}
 
@@ -59,14 +56,14 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 
 ![](images/GenAIstorm.png){fig-align="center" width=45%}
 
-# What is the power behind it ?
+# Power behind it ?
 
 ![](images/GPT_Compower.png){fig-align="center" width=75%}
 
 # Main advancement since 2017 ?
 
 ::: {layout-ncol=2}
-![Transformers](images/Transformers_Time.png){fig-align="center" width=50%}
+![Transformers](images/Transformers_Time.png){fig-align="center" width=45%}
 
 ![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=45%}
 :::
@@ -75,70 +72,42 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 
 - Parallelization and Efficiency
 - Long-Range Dependencies
-- Transfer Learning with Transformer
-- Contextual Embeddings
+- Transfer Learning and Contextual Embeddings
 
 * <span style="color: red;"> Attention Overhead for Long Sequences </span>
 * <span style="color: red;"> Lack of Sequential Order</span>
 * <span style="color: red;"> Excessive Parameterization</span>
 * <span style="color: red;"> Fixed Input Length and Inability to Handle Unstructured Inputs</span>
 
-
-::: {.grid}
-
-::: {.g-col-6}
-
-## Advantages
-
-- Parallelization and Efficiency
-- Long-Range Dependencies
-- Transfer Learning with Transformer
-- Contextual Embeddings
-
-:::
-  
-::: {.g-col-6}
-
-## Limitations
-
-* Attention Overhead for Long Sequences
-* Lack of Sequential Order
-* Excessive Parameterization
-* Fixed Input Length and Inability to Handle Unstructured Inputs
-
-:::
-  
-:::  
-
 # Modern LLMs traces
 
 ![](images/LLMtrees.png){fig-align="center" width=50%}
+
 Image Credit: [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
 
 # What about ChatGPT ?
 
 Only decoder type LLM indeed, but the output improvement relies on the concept of RLHF (Reinforcement Learning with Human Feedback)
 
-Strengths
+- Strengths
   - Understanding of Context, Large-Scale Language Model, Fine-Tuning Process
 
-Limitations
+- Limitations
   - Biases, Inappropriate or Unsafe Outputs, Inability to Fact-Check
 
-# Based vs Fine Tuned LLM 
+# Based vs Fine Tuned
 
 ![](images/DeepL_LLMtypes.png){fig-align="center" width=50%}
 
-# Some LLM news (rapidly changing!)
+# Some LLM news!
 
 - Multimodality already for some!
 
 - As apps (ChatGPT android)
 
-- Specific: ChatGPT can see, hear and speak (''ChatGPT can now see, hear, and speak. Rolling out over next two weeks, Plus users will be able to have voice conversations with ChatGPT (iOS \& Android) and to include images in conversations
+- Specific: ChatGPT can see, hear and speak (''ChatGPT can now see, hear, and speak.
 
-- [Custom GPTs](https://openai.com/blog/introducing-gpts) are released already! 
-  * More recently, they released [GPT store](https://openai.com/blog/introducing-the-gpt-store)
+- [Custom GPTs](https://openai.com/blog/introducing-gpts) are released already! More recently, they released [GPT store](https://openai.com/blog/introducing-the-gpt-store)
 
 - Upcoming: "[Gemini](https://deepmind.google/technologies/gemini/#introduction) is built from the ground up for multimodality — reasoning seamlessly across text, images, video, audio, and code."
 
@@ -162,29 +131,25 @@ Limitations
 
 - Recently: [Microsoft Copilot](https://copilot.microsoft.com/) is available for university! announced as *Protected Mode for users from educational institutions*
 
-# About Prompt Engineering
+# Prompt Engineering
 
-- This is mainly about writing efficient prompts by considering it as an iterative process in general. 
-
-- "Prompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models (LMs) for a wide variety of applications and research topics."
+- This is mainly about writing efficient prompts to use language models (LMs) and possible to consider it as an iterative process. 
 
 - It allows us to better understand the capabilities and limitations of large language models (LLMs)
 
 - Researchers generally use prompt engineering to improve the capacity of the considered LLMs on a wide range of tasks including (but not limited) to question answering and arithmetic reasoning.
 
-# Iterating is the key!
+---
 
 ![](images/DeepL_IterPrompt.png){fig-align="center" width=50%}
 
-# Importance of LLM settings 
+# About LLM settings 
 
 * When designing and writing prompts, we typically interact with the LLM via an API or more friendly interfaceas such as ChatGPT etc.
 
 * It is crucial to know configured model parameters and how they work in general!
   
 **What about these main parameters ?**
-
----
 
 # LLM Model Parameters
 
@@ -226,8 +191,6 @@ Some [further details from OpenAI](https://platform.openai.com/docs/api-referenc
 
 # Basic Template 
 
-"You can achieve a lot with simple prompts, but the quality of results depends on how much information you provide it and how well-crafted the prompt is."
-
 - **Prompt**: What we want from LLM
 
 - **Output**: What we will get from the LLM 
@@ -241,8 +204,6 @@ It is possible to use such elements when they are necessary to guide the LLM mor
 :::
 
 # Elements of a Prompt
-
-Any prompt can include the following elements;
 
 - **Instruction**: a specific task or instruction you want the model to perform
 
@@ -268,18 +229,13 @@ No need all the four elements for a prompt and the format depends on the task at
 
 - [Code Generation](https://www.promptingguide.ai/introduction/examples#code-generation)
 
-- [Mathematical Reasoning](https://www.promptingguide.ai/introduction/examples#reasoning)
-
-- $\ldots$
-
 ::: {.callout-note}
 Prompt: Classify the text into neutral, negative or positive. 
-
 Text: I think the food was okay. 
 Sentiment: 
 :::
 
-# OpenAI suggested strategies
+# OpenAI suggestions
 
 - **Write clear instructions**
 
@@ -349,7 +305,7 @@ For each strategy we can see various given tactics below
 
 - [Give the model access to specific functions](https://platform.openai.com/docs/guides/prompt-engineering/tactic-give-the-model-access-to-specific-functions)
 
-# Test changes systematically
+# Testing changes
 
 Evaluation procedures (or "evals") are useful for optimizing system designs
 
@@ -367,11 +323,9 @@ More advanced prompting engineering techniques that allow us to achieve more com
 
 - [Biases](https://www.promptingguide.ai/risks/biases)
 
-# Some Advanced Methods 
+# Advanced Methods 
 
-These are some techniques from the open book of [Prompt Engineering Guide](https://www.promptingguide.ai/)
-
-Including but not limited to,
+These are some techniques from the open book of [Prompt Engineering Guide](https://www.promptingguide.ai/). Including but not limited to,
 
 - Zero-Shot Prompting
 
@@ -384,8 +338,6 @@ Including but not limited to,
 - PAL (Program-Aided Language Models)
 
 - **[Retrieval Augmented Generation (RAG)](https://arxiv.org/abs/2312.10997)**
-
---- 
 
 # Few-shot learning 
 
@@ -401,8 +353,6 @@ Including but not limited to,
 It is better than zero-shot to some extent but may fail especially when dealing with more complex reasoning tasks!
 :::
 
---- 
-
 # Chain of Thought (CoT)
 
 - This method has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
@@ -413,11 +363,11 @@ It is better than zero-shot to some extent but may fail especially when dealing 
 
 - You can see different types such as Zero- or Few-shot COT Prompting or Automatic Chain-of-Thought (Auto-CoT)
 
-# Simple Example on (CoT)
+# CoT Example
 
 ![](images/cot_image.webp){fig-align="center" width=60%}
 
-# Getting more technical: RAGs
+# More technical: RAGs
 
 - For more complex and knowledge-intensive tasks, it's possible to build a language model-based system that accesses external knowledge sources
 
@@ -426,8 +376,6 @@ It is better than zero-shot to some extent but may fail especially when dealing 
 - RAG combines an information retrieval component with a text generator model.
 
 - RAG allows language models to bypass retraining, enabling access to the latest information for generating reliable outputs via retrieval-based generation
-
----
 
 # Workflow of RAG
 
@@ -443,6 +391,8 @@ Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_ca
 
 ---
 
+Time to see some coding
+
 # Resources on Prompting 
 
 - [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques.
@@ -455,7 +405,7 @@ Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_ca
 
 # Time to Reflect
 
-Please share your feedback to improve this trial
+Please share your feedback to improve this training
 
 
 
