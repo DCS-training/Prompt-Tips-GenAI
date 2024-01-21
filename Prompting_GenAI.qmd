@@ -11,32 +11,45 @@ format:
 
 # Welcome: General Agenda
 
-Part 1: Introduction to Gen-AI and Prompt Engineering
+Part 1: Introduction to Gen-AI
 
 -   Welcome and Overview
 -   What are Gen-AI Tools or LLMs?
 -   Importance of LLM Settings
--   Basics and elements of Prompting.
--   Key Components of Prompt Engineering
+
 
 ---
 
 Part 2: Techniques in Prompt Engineering
 
+- Basics and elements of Prompting.
+- Key Components of Prompt Engineering
 - General Tips for Designing Prompts
 - Strategies for Effective Prompting
 - Techniques in Advanced Prompt Formulation
-- Group hands-on: Prompt Formulation Practice
 
 ---
 
 Part 3: Exploring ChatGPT with Data Analytics
 
 - Brief Introduction to ChatGPT Plugins for Data Analytics
+- Some other plugins
 
 **Closing**
 
 - Feedback and Closing Remarks
+
+# A Little about me
+
+I am University Teacher in Statistics at the School of Mathematics, at the University of Edinburgh since 2022. Previously, I held postdoc positions at Padova University (2021) and KU Leuven (2020), after completing my PhD at Middle East Technical University in 2018. Recently deserved my Fellowship of Higher Education Academics (FHEA) in 2023. 
+
+- As a member of teaching team in the school of Math
+  * TEMSE seminars co-organiser
+  * Leading Gen-AI related discussions
+  
+- Being a part of EdinbR local group and RSS Edinburgh local group
+
+- New contributor in pair-programming club
 
 # Intersection of different fields
 
@@ -44,7 +57,7 @@ Part 3: Exploring ChatGPT with Data Analytics
 
 # Huge Public Interest
 
-![](images/GenAIstorm.png){fig-align="center" width=50%}
+![](images/GenAIstorm.png){fig-align="center" width=45%}
 
 # What is the power behind it ?
 
@@ -58,10 +71,59 @@ Part 3: Exploring ChatGPT with Data Analytics
 ![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=45%}
 :::
 
+## Advantages and Limitations of Transformers
+
+- Parallelization and Efficiency
+- Long-Range Dependencies
+- Transfer Learning with Transformer
+- Contextual Embeddings
+
+* <span style="color: red;"> Attention Overhead for Long Sequences </span>
+* <span style="color: red;"> Lack of Sequential Order</span>
+* <span style="color: red;"> Excessive Parameterization</span>
+* <span style="color: red;"> Fixed Input Length and Inability to Handle Unstructured Inputs</span>
+
+
+::: {.grid}
+
+::: {.g-col-6}
+
+## Advantages
+
+- Parallelization and Efficiency
+- Long-Range Dependencies
+- Transfer Learning with Transformer
+- Contextual Embeddings
+
+:::
+  
+::: {.g-col-6}
+
+## Limitations
+
+* Attention Overhead for Long Sequences
+* Lack of Sequential Order
+* Excessive Parameterization
+* Fixed Input Length and Inability to Handle Unstructured Inputs
+
+:::
+  
+:::  
+
 # Modern LLMs traces
 
 ![](images/LLMtrees.png){fig-align="center" width=50%}
 Image Credit: [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
+
+# What about ChatGPT ?
+
+Only decoder type LLM indeed, but the output improvement relies on the concept of RLHF (Reinforcement Learning with Human Feedback)
+
+Strengths
+  - Understanding of Context, Large-Scale Language Model, Fine-Tuning Process
+
+Limitations
+  - Biases, Inappropriate or Unsafe Outputs, Inability to Fact-Check
 
 # Based vs Fine Tuned LLM 
 
@@ -76,6 +138,7 @@ Image Credit: [Different development paths of LLMs](https://www.interconnects.ai
 - Specific: ChatGPT can see, hear and speak (''ChatGPT can now see, hear, and speak. Rolling out over next two weeks, Plus users will be able to have voice conversations with ChatGPT (iOS \& Android) and to include images in conversations
 
 - [Custom GPTs](https://openai.com/blog/introducing-gpts) are released already! 
+  * More recently, they released [GPT store](https://openai.com/blog/introducing-the-gpt-store)
 
 - Upcoming: "[Gemini](https://deepmind.google/technologies/gemini/#introduction) is built from the ground up for multimodality — reasoning seamlessly across text, images, video, audio, and code."
 
@@ -195,19 +258,17 @@ No need all the four elements for a prompt and the format depends on the task at
 
 # Some Examples 
 
-- Text Summarization
+- [Text Summarization](https://www.promptingguide.ai/introduction/examples#text-summarization)
 
-- Information Extraction
+- [Information Extraction](https://www.promptingguide.ai/introduction/examples#information-extraction)
 
-- Question Answering
+- [Question Answering](https://www.promptingguide.ai/introduction/examples#question-answering)
 
-- Text Classification
+- [Text Classification or Sentiment Analysis](https://www.promptingguide.ai/introduction/examples#text-classification)
 
-- Conversation
+- [Code Generation](https://www.promptingguide.ai/introduction/examples#code-generation)
 
-- Code Generation
-
-- Reasoning
+- [Mathematical Reasoning](https://www.promptingguide.ai/introduction/examples#reasoning)
 
 - $\ldots$
 
@@ -220,20 +281,20 @@ Sentiment:
 
 # OpenAI suggested strategies
 
-- Write clear instructions
+- **Write clear instructions**
 
-- Provide reference text
+- **Provide reference text, if we need**
 
-- Split complex tasks into simpler subtasks
+- **Split complex tasks into simpler sub-tasks**
 
-- Give the model time to "think"
+- **Give the model time to "think"**
 
-- Use external tools
+- **Use external tools or knowledge, if we need**
 
-- Test changes systematically
+- **Test changes systematically**
 
 ::: {.callout-note}
-For each strategy we can see various given tactics 
+For each strategy we can see various given tactics below 
 :::
 
 # Write clear instructions
@@ -334,7 +395,7 @@ Including but not limited to,
 
 - This technique enables in-context learning where we provide demonstrations in the prompt to improve the model performance.
 
-- For more difficult tasks, we can experiment with increasing the demonstrations (e.g., 3-shot, 5-shot, 10-shot, etc.)
+- For more difficult tasks, we can experiment with increasing the demonstrations (e.g., **3-shot**, 5-shot, 10-shot, etc.)
 
 ::: {.callout-warning}
 It is better than zero-shot to some extent but may fail especially when dealing with more complex reasoning tasks!
@@ -382,11 +443,21 @@ Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_ca
 
 ---
 
+# Resources on Prompting 
 
-# Further Resources on Prompting 
+- [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques.
 
 - [OpenAI Cookbook](https://cookbook.openai.com/)
 
+- [Brex's Prompt Engineering Guide](https://github.com/brexhq/prompt-engineering)  Brex's introduction to language models and prompt engineering.
+
 - [Prompting libraries & tools](https://cookbook.openai.com/articles/related_resources)
+
+# Time to Reflect
+
+Please share your feedback to improve this trial
+
+
+
 
 
