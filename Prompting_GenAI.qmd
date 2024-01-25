@@ -63,7 +63,7 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 # Main advancement since 2017 ?
 
 ::: {layout-ncol=2}
-![Transformers](images/Transformers_Time.png){fig-align="center" width=45%}
+![Transformers](images/Enc_Deco.png){fig-align="center" width=45%}
 
 ![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=45%}
 :::
@@ -98,6 +98,10 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 # Based vs Fine Tuned
 
 ![](images/DeepL_LLMtypes.png){fig-align="center" width=50%}
+
+# ChatGPT structure
+
+![](images/GPT_Deco.png){fig-align="center" width=50%}
 
 # Some LLM news!
 
