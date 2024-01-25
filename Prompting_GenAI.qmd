@@ -5,8 +5,8 @@ format:
   revealjs:
     slide-number: true
     transition: slide
-    footer: <https://github.com/DCS-training/Prompt-Tips-GenAI>
     logo: images/DCSlogo.png
+output-dir: docs
 ---
 
 # General Agenda
@@ -50,7 +50,7 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 
 # Intersection of fields
 
-![](images/GenAI_Venn.png){fig-align="center" width=50%}
+![](images/GenAI_Venn.png){fig-align="center" width=45%}
 
 # Huge Public Interest
 
@@ -63,9 +63,9 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 # Main advancement since 2017 ?
 
 ::: {layout-ncol=2}
-![Transformers](images/Enc_Deco.png){fig-align="center" width=45%}
+![Transformers](images/Enc_Deco.png){fig-align="center" width=40%}
 
-![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=45%}
+![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=40%}
 :::
 
 ## Advantages and Limitations of Transformers
@@ -123,11 +123,11 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 
 - OpenAI: **GPT-3.5** or recent version **GPT4** if you have paid membership
   * There will be some examples from playground
-  * You will see some examples in a python code for later experiments
+  * You will have some examples in a python code to play with
 
-- Google: **Bard** now, **Gemini** later 
+- Google: **Bard** now, **Gemini** later. For [Bard](https://bard.google.com/chat) 
 
-- Antrophic: **Claude-2**
+- Antrophic: **Claude-2** with its [website](https://claude.ai/chats)
 
 - Meta: **Llama-2** (70B) via a specific [website](https://www.llama2.ai/)
 
@@ -327,6 +327,10 @@ More advanced prompting engineering techniques that allow us to achieve more com
 
 - [Biases](https://www.promptingguide.ai/risks/biases)
 
+::: {.callout-note}
+Remember that LLM outputs may include hallucination in general! 
+:::
+
 # Advanced Methods 
 
 These are some techniques from the open book of [Prompt Engineering Guide](https://www.promptingguide.ai/). Including but not limited to,
@@ -395,7 +399,19 @@ Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_ca
 
 ---
 
-Time to see some coding
+Time to see some coding (if you are interested in more)
+
+- Short notes and examples in Python
+
+- Short demo of Embedchain
+
+- Short demo of Langchain
+
+::: {.callout-note}
+Brief Introduction to ChatGPT Plugins for Data Analytics and about Plugins!
+:::
+
+---
 
 # Resources on Prompting 
 
@@ -410,6 +426,7 @@ Time to see some coding
 # Time to Reflect
 
 Please share your feedback to improve this training
+
 
 
 
