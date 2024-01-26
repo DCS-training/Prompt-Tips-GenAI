@@ -1,9 +1,27 @@
 # Some Related Extre sources to be added (be selective)
 
-- [Getting started with prompts for text-based Generative AI tools](https://huit.harvard.edu/news/ai-prompts)
+1 - [Getting started with prompts for text-based Generative AI tools](https://huit.harvard.edu/news/ai-prompts)
 
-- [Awesome ChatGPT Prompts](https://prompts.chat/)
+2 - [Awesome ChatGPT Prompts](https://prompts.chat/)
 
-- [15 Tips to Become a Better Prompt Engineer for Generative AI](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/15-tips-to-become-a-better-prompt-engineer-for-generative-ai/ba-p/3882935)
+3 - [15 Tips to Become a Better Prompt Engineer for Generative AI](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/15-tips-to-become-a-better-prompt-engineer-for-generative-ai/ba-p/3882935)
 
-- [Prompt-Engineering for Open-Source LLMs](https://docs.google.com/presentation/d/1geCVrmNAs8lT2BACA_2dYhhWUJNdPDGax4elMw1Jbsk/edit?_hsmi=291162901&_hsenc=p2ANqtz-88BoJ_mwyL7dr9Yw5HhY0YCZ4T4Xwy0S1-Dej1HuH6zwjIZFzU16GiwOtFYDruBFReP7n6YrvWvgV5yGeOkBLjArKXyw#slide=id.g28ea9a3ba37_1_73)
+4 - [Prompt-Engineering for Open-Source LLMs](https://docs.google.com/presentation/d/1geCVrmNAs8lT2BACA_2dYhhWUJNdPDGax4elMw1Jbsk/edit?_hsmi=291162901&_hsenc=p2ANqtz-88BoJ_mwyL7dr9Yw5HhY0YCZ4T4Xwy0S1-Dej1HuH6zwjIZFzU16GiwOtFYDruBFReP7n6YrvWvgV5yGeOkBLjArKXyw#slide=id.g28ea9a3ba37_1_73)
+
+# Some specific notes
+
+From the source numbered as 3;
+
+Be Mindful of Token Limits: "Prompt size is limited by the number of tokens the model can handle. 
+Tokens represent individual units of text. Use space efficiently by considering factors like table 
+formatting for data inclusion and optimizing whitespace usage. 
+For example, The Azure OpenAI text-davinci-003 model has a limit of 4097 tokens of 
+combined input and output. Given that we want around 250 words of output and a token 
+represents about one-half of a word, we will reserve 500 tokens for the completion response. 
+That leaves ~3500 tokens for input, or about 1700 words." Potentially changing and not up to date!
+
+Understand the Different APIs: Depending on the model you're using, such as GPT-35-Turbo or GPT-4, 
+you'll need to format your input differently for the Chat Completion API or the Completion API. 
+Familiarize yourself with the specific requirements of each API to ensure proper prompt design. 
+Check out this website: https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits
+
