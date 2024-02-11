@@ -16,6 +16,10 @@ Course slides are prepared as a mixture of different related sources but mainly 
 
 [Prompt Engineering Guide](https://www.promptingguide.ai/)
 
+### Acknowledgements
+
+Further thanks for inspiring people including but not limited to [Andrew NG](https://www.andrewng.org/), [Sebastian Raschka](https://sebastianraschka.com/).
+
 ## Related keywords
 
 *Generative Artificial Intelligence (Gen-AI)*, *Large Language Models (LLMs)*, *ChatGPT*
