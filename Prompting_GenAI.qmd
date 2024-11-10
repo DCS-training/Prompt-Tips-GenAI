@@ -6,6 +6,7 @@ format:
     slide-number: true
     transition: slide
     logo: images/DCSlogo.png
+output-dir: docs
 ---
 
 # General Agenda

@@ -1,9 +1,0 @@
-[
-  {
-    "objectID": "docs/Prompting_GENAI.html#advantages-and-limitations-of-transformers",
-    "href": "docs/Prompting_GENAI.html#advantages-and-limitations-of-transformers",
-    "title": "Prompting for Gen-AI",
-    "section": "Advantages and Limitations of Transformers",
-    "text": "Advantages and Limitations of Transformers\n\nParallelization and Efficiency\nLong-Range Dependencies\nTransfer Learning and Contextual Embeddings\n Attention Overhead for Long Sequences \n Lack of Sequential Order\n Excessive Parameterization\n Fixed Input Length and Inability to Handle Unstructured Inputs"
-  }
-]
