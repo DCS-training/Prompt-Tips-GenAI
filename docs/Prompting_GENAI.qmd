@@ -6,7 +6,6 @@ format:
     slide-number: true
     transition: slide
     logo: images/DCSlogo.png
-output-dir: docs
 ---
 
 # General Agenda
@@ -435,6 +434,8 @@ There are some code-based examples (if you are interested)
 - Short demo of Langchain for a pdf file
 
 
+---
+
 # About GPTs via OpenAI 
 
 ::: {.callout-note}
@@ -442,6 +443,8 @@ Brief Introduction to ChatGPT Advanced Data Analytics and about GPTs!
 :::
 
 "Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills."
+
+Other LLM related tools can be;
 
 - [Scholar ai](https://scholarai.io/) - 
 
@@ -451,7 +454,7 @@ Brief Introduction to ChatGPT Advanced Data Analytics and about GPTs!
 
 - ...
 
-# Other Resources
+# Other Resources on Prompting 
 
 - [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques. Especially the [hub page](https://www.promptingguide.ai/prompts) can be good to explore  
 
@@ -460,6 +463,8 @@ Brief Introduction to ChatGPT Advanced Data Analytics and about GPTs!
 - [OpenAI Prompt Examples](https://platform.openai.com/docs/examples)
 
 - [Prompting libraries & tools](https://cookbook.openai.com/articles/related_resources)
+
+---
 
 - [Google Prompt Engineering page](https://developers.google.com/machine-learning/resources/prompt-eng)
 
