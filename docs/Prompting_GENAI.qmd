@@ -1,0 +1,480 @@
+---
+title: "Prompting for Gen-AI"
+subtitle: "Basics of Prompt Engineering for LLMs"
+format: 
+  revealjs:
+    slide-number: true
+    transition: slide
+    logo: images/DCSlogo.png
+output-dir: docs
+---
+
+# General Agenda
+
+**Part 1**: Introduction to Gen-AI
+
+-   Welcome and Overview
+-   What are Gen-AI Tools or LLMs?
+-   Importance of LLM Settings
+
+
+---
+
+**Part 2**: Techniques in Prompt Engineering
+
+- Basics and elements of Prompting.
+- Key Components of Prompt Engineering
+- General Tips for Designing Prompts
+- Strategies for Effective Prompting
+- Techniques in Advanced Prompt Formulation
+
+---
+
+**Part 3**: Exploring ChatGPT with Data Analytics
+
+- Brief Introduction to ChatGPT Plugins for Data Analytics
+- Other useful plugins or tools 
+
+**Closing**
+
+- Feedback and Closing Remarks
+
+# A Little about me
+
+I am University Teacher in Statistics (Teaching Fellow - FHEA) at the School of Mathematics (SoM), at the University of Edinburgh since 2022.
+
+- Beyond being a member teaching team in the SoM
+  * TEMSE seminars co-organiser and Leading Gen-AI related discussions
+  * Being a part of EdinbR and RSS Edinburgh local group
+  * Contributing for Pair Programming club & CDCS 
+
+# Intersection of fields
+
+![](images/AI_hiear_LLM.png){fig-align="center" width=65%}
+
+# Huge Public Interest
+
+![](images/GenAI_bubless.png){fig-align="center" width=45%}
+
+# Power behind it ?
+
+![](images/GPT_Compower.png){fig-align="center" width=75%}
+
+# Main advancement since 2017 ?
+
+::: {layout-ncol=2}
+![](images/Enc_Deco.png){fig-align="center" width=50%}
+
+![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=35%}
+:::
+
+## Advantages and Limitations of Transformers
+
+- Parallelization and Efficiency
+- Long-Range Dependencies
+- Transfer Learning and Contextual Embeddings
+
+* <span style="color: red;"> Attention Overhead for Long Sequences </span>
+* <span style="color: red;"> Lack of Sequential Order</span>
+* <span style="color: red;"> Excessive Parameterization</span>
+* <span style="color: red;"> Fixed Input Length and Inability to Handle Unstructured Inputs</span>
+
+# Importance of Attention ?
+
+![](images/Transformers.png){fig-align="center" width=65%}
+
+# LLM tools landscape
+
+![](images/Interactive_LLMs.png){fig-align="center" width=55%}
+
+# What about ChatGPT ?
+
+Only decoder type LLM indeed, but the output improvement relies on the concept of RLHF (Reinforcement Learning with Human Feedback)
+
+- Strengths
+  - Understanding of Context, Large-Scale Language Model, Fine-Tuning Process
+
+- Limitations
+  - Biases, Inappropriate or Unsafe Outputs, Inability to Fact-Check
+
+
+# ChatGPT structure
+
+![](images/GPT_Deco.png){fig-align="center" width=50%}
+
+# Some LLM news - 2023!
+
+- Multimodality already for some!
+
+- As apps (ChatGPT android)
+
+- Specific: ChatGPT can see, hear and speak (''ChatGPT can now see, hear, and speak.
+
+- [Custom GPTs](https://openai.com/blog/introducing-gpts) are released already! More recently, they released [GPT store](https://openai.com/blog/introducing-the-gpt-store)
+
+- Upcoming: "[Gemini](https://deepmind.google/technologies/gemini/#introduction) is built from the ground up for multimodality — reasoning seamlessly across text, images, video, audio, and code."
+
+# Some LLM news - 2024!
+
+- Different versions of GPT (including 4o, mini, o1-preview for advanced reasoning), lastly with GPT-4o with canvas
+
+- Voice option is working now for GPT and more recently introduced ChatGPTSearch
+
+- Claude 3.5 Sonnet, and Claude 3.5 Haiku - can direct Claude to use computers the way people do
+
+- Meta’s Next Llama AI Models Are Training on a GPU Cluster ‘Bigger Than Anything’ Else ?
+
+- Increase on the multi-agent frameworks for different applications!
+
+**What about available tools that we can play with ?**
+
+# Which tool we can use? 
+
+- OpenAI: **GPT-3.5** or recent version **GPT4** if you have paid membership
+
+- Google: **Bard** now, **Gemini** later. For [Bard](https://bard.google.com/chat) 
+
+- Antrophic: **Claude-2** with its [website](https://claude.ai/chats)
+
+- Meta: **Llama-2** (70B) via a specific [website](https://www.llama2.ai/)
+
+- Mistral: Check out their [platform as open-source alternative](https://mistral.ai/product/)
+
+- [Microsoft Copilot](https://copilot.microsoft.com/) is available for university! announced as *Protected Mode for users from educational institutions*
+
+- *University ELM platform*: Edinburgh (access to) Language Models, via [ELM](https://www.ed.ac.uk/information-services/computing/comms-and-collab/elm)
+
+# Prompt Engineering
+
+- This is mainly about writing efficient prompts to use language models (LMs) and possible to consider it as an iterative process. 
+
+- It allows us to better understand the capabilities and limitations of large language models (LLMs)
+
+- Researchers generally use prompt engineering to improve the capacity of the considered LLMs on a wide range of tasks including (but not limited) to question answering and arithmetic reasoning.
+
+---
+
+![](images/DeepL_IterPrompt.png){fig-align="center" width=50%}
+
+# About LLM settings 
+
+* When designing and writing prompts, we typically interact with the LLM via an API or more friendly interfaceas such as ChatGPT etc.
+
+* It is crucial to know configured model parameters and how they work in general!
+  
+**What about these main parameters ?**
+
+# LLM Model Parameters
+
+- *Temperature*
+  - **Low:** Produces deterministic, factual outputs. Ideal for fact-based Q&A type tasks .
+  - **High:** Encourages creative, diverse responses. Useful for creative tasks like creating poetry or story.
+
+- *Top P (Nucleus Sampling)*
+  - **Low:** Yields exact, confident answers. Best for factual responses.
+  - **High:** Offers diverse outputs, considering less likely words.
+
+---
+
+- *Max Length*
+  - Controls output token count. Helps avoid overly long or irrelevant responses, managing cost.
+
+- *Stop Sequences*
+  - Strings that terminate token generation. Used to limit response length and structure.
+
+- *Frequency Penalty*: Penalizes repeated tokens based on frequency. Reduces word repetition in responses.
+
+- *Presence Penalty*: Penalizes all repeated tokens equally. Prevents phrase repetition. Adjust for creativity or focus.
+  
+---
+
+
+![](images/Nucleus_Sampling.png){fig-align="center" width=50%}
+
+---
+
+::: {.callout-note}
+The general recommendation is to alter **temperature** or **Top P** but **not both**.
+:::
+  
+::: {.callout-note}
+Similar to temperature and Top P, the general recommendation is to alter the **frequency** or **presence** penalty but **not both**
+:::
+
+::: {.callout-warning}
+Keep in mind that your results may vary depending on the which LLM or which version of LLM you use.
+:::
+
+Some [further details from OpenAI](https://platform.openai.com/docs/api-reference/chat/object)
+
+# Basic Template 
+
+- **Prompt**: What we want from LLM
+
+- **Output**: What we will get from the LLM 
+
+::: {.callout-note}
+A prompt can contain information like the instruction or question you are passing to the model and include other details such as context, inputs, or examples
+:::
+
+::: {.callout-tip}
+It is possible to use such elements when they are necessary to guide the LLM more effectively, for the purpose of output improvement!
+:::
+
+# Elements of a Prompt
+
+- **Instruction**: a specific task or instruction you want the model to perform
+
+- **Context**: external information or additional context that can steer the model to better responses
+
+- **Input Data**: the input or question that we are interested to find a response for
+
+- **Output Indicator** the type or format of the output.
+
+::: {.callout-warning}
+No need all the four elements for a prompt and the format depends on the task.
+:::
+
+# Some Examples 
+
+- [Text Summarization](https://www.promptingguide.ai/introduction/examples#text-summarization)
+
+- [Information Extraction](https://www.promptingguide.ai/introduction/examples#information-extraction)
+
+- [Question Answering](https://www.promptingguide.ai/introduction/examples#question-answering)
+
+- [Text Classification or Sentiment Analysis](https://www.promptingguide.ai/introduction/examples#text-classification)
+
+- [Code Generation](https://www.promptingguide.ai/introduction/examples#code-generation)
+
+---
+
+# ELM Use-cases
+
+[Examples](https://www.ed.ac.uk/information-services/computing/comms-and-collab/elm/getting-access-and-examples/examples-of-how-to-use-elm-with-prompts) demonstrating the application of ELM across different themes;
+
+- Code Writing
+- Writing a Literature Review
+- Summarising a material
+- Searching for academic information
+- Learning a subject
+- Developing Teaching Plans
+- Creating Assessments
+- Generating Research Ideas
+- Checking response to tutorial questions 
+- Create Templates
+
+---
+
+# OpenAI suggestions
+
+- **Write clear instructions**
+
+- **Provide reference text, if we need**
+
+- **Split complex tasks into simpler sub-tasks**
+
+- **Give the model time to "think"**
+
+- **Use external tools or knowledge, if we need**
+
+- **Test changes systematically**
+
+::: {.callout-note}
+For each strategy we can see various given tactics below 
+:::
+
+# Write clear instructions
+
+- [Include details in your query to get more relevant answers](https://platform.openai.com/docs/guides/prompt-engineering/tactic-include-details-in-your-query-to-get-more-relevant-answers)
+ * This is like feeding LLM with important details or context
+
+- [Ask the model to adopt a persona](https://platform.openai.com/docs/guides/prompt-engineering/tactic-ask-the-model-to-adopt-a-persona)
+  * You act as a workshop tutor!
+
+- [Use delimiters to clearly indicate distinct parts of the input](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
+  * specify the related content explicitly, ie. <article> insert first article here </article>
+
+- [Specify the steps required to complete a task](https://platform.openai.com/docs/guides/prompt-engineering/tactic-specify-the-steps-required-to-complete-a-task)
+  * Spliting the task into smaller parts  
+
+- [Provide examples](https://platform.openai.com/docs/guides/prompt-engineering/tactic-provide-examples)
+
+- [Specify the desired length of the output](https://platform.openai.com/docs/guides/prompt-engineering/tactic-specify-the-desired-length-of-the-output)
+
+# Provide reference text
+
+- [Instruct the model to answer using a reference text](https://platform.openai.com/docs/guides/prompt-engineering/tactic-instruct-the-model-to-answer-using-a-reference-text)
+  * Adding extra information
+
+- [Instruct the model to answer with citations from a reference text](https://platform.openai.com/docs/guides/prompt-engineering/tactic-instruct-the-model-to-answer-with-citations-from-a-reference-text)
+  * Adding external source
+
+# Split complex tasks into simpler subtasks
+
+- [Use intent classification to identify the most relevant instructions for a user query](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-intent-classification-to-identify-the-most-relevant-instructions-for-a-user-query)
+
+- [For dialogue applications that require very long conversations, summarize or filter previous dialogue](https://platform.openai.com/docs/guides/prompt-engineering/tactic-for-dialogue-applications-that-require-very-long-conversations-summarize-or-filter-previous-dialogue)
+
+- [Summarize long documents piecewise and construct a full summary recursively](https://platform.openai.com/docs/guides/prompt-engineering/tactic-summarize-long-documents-piecewise-and-construct-a-full-summary-recursively)
+
+# Give models time to "think"
+
+- [Instruct the model to work out its own solution before rushing to a conclusion](https://platform.openai.com/docs/guides/prompt-engineering/tactic-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion)
+
+- [Use inner monologue or a sequence of queries to hide the model's reasoning process](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-inner-monologue-or-a-sequence-of-queries-to-hide-the-model-s-reasoning-process)
+
+- [Ask the model if it missed anything on previous passes](https://platform.openai.com/docs/guides/prompt-engineering/tactic-ask-the-model-if-it-missed-anything-on-previous-passes)
+
+# Use external tools
+
+- [Use embeddings-based search to implement efficient knowledge retrieval](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-embeddings-based-search-to-implement-efficient-knowledge-retrieval)
+ * More technical, such as RAG method
+
+- [Use code execution to perform more accurate calculations or call external APIs](https://platform.openai.com/docs/guides/prompt-engineering/tactic-use-code-execution-to-perform-more-accurate-calculations-or-call-external-apis)
+ * Such as guiding LLM to do something with another tool!
+
+- [Give the model access to specific functions](https://platform.openai.com/docs/guides/prompt-engineering/tactic-give-the-model-access-to-specific-functions)
+
+# Testing changes
+
+Evaluation procedures (or "evals") are useful for optimizing system designs
+
+- [Evaluate model outputs with reference to gold-standard answers](https://platform.openai.com/docs/guides/prompt-engineering/tactic-evaluate-model-outputs-with-reference-to-gold-standard-answers)
+
+::: {.callout-note}
+More advanced prompting engineering techniques that allow us to achieve more complex tasks and improve reliability and performance of LLMs
+:::
+
+# Risks & Misuses
+
+- [Adversarial Prompting](https://www.promptingguide.ai/risks/adversarial)
+
+- [Factuality](https://www.promptingguide.ai/risks/factuality)
+
+- [Biases](https://www.promptingguide.ai/risks/biases)
+
+::: {.callout-note}
+Remember that LLM outputs may include hallucination in general! 
+:::
+
+# Advanced Methods 
+
+These are some techniques from the open book of [Prompt Engineering Guide](https://www.promptingguide.ai/). Including but not limited to,
+
+- Zero-Shot Prompting
+
+- **Few-Shot Prompting**
+
+- **Chain-of-Thought Prompting**
+
+- Generated Knowledge Prompting
+
+- PAL (Program-Aided Language Models)
+
+- **[Retrieval Augmented Generation (RAG)](https://arxiv.org/abs/2312.10997)**
+
+# Few-shot learning 
+
+- Generally, LLms are capable of performing some tasks "zero-shot." Just asking what we want simply
+
+- When zero-shot doesn't work, it's recommended to provide demonstrations or examples in the prompt which leads to few-shot prompting
+
+- This technique enables in-context learning where we provide demonstrations in the prompt to improve the model performance.
+
+- For more difficult tasks, we can experiment with increasing the demonstrations (e.g., **3-shot**, 5-shot, 10-shot, etc.)
+
+::: {.callout-warning}
+It is better than zero-shot to some extent but may fail especially when dealing with more complex reasoning tasks!
+:::
+
+# Chain of Thought (CoT)
+
+- This method has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
+
+- Chain-of-thought (CoT) prompting enables complex reasoning capabilities through intermediate reasoning steps ([Wei et al. (2022)](https://arxiv.org/abs/2201.11903))
+
+- It is possible to combine it with few-shot prompting to get better results on more complex tasks
+
+- You can see different types such as Zero- or Few-shot COT Prompting or Automatic Chain-of-Thought (Auto-CoT)
+
+# CoT Example
+
+![](images/cot_image.webp){fig-align="center" width=60%}
+
+# More technical: RAGs
+
+- For more complex and knowledge-intensive tasks, it's possible to build a language model-based system that accesses external knowledge sources
+
+- This is a common and one of the cheapest option to reduce the problem of "hallucination" in general
+
+- RAG combines an information retrieval component with a text generator model.
+
+- RAG allows language models to bypass retraining, enabling access to the latest information for generating reliable outputs via retrieval-based generation
+
+# Workflow of RAG
+
+![](images/RAGs.png){fig-align="center" width=75%}
+
+Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_cases/question_answering/)
+
+---
+
+![](images/RAGs_2.png){fig-align="center" width=75%}
+
+Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_cases/question_answering/)
+
+---
+
+There are some code-based examples (if you are interested)
+
+- Short notes and examples in Python
+
+- Short demo of Embedchain for a webpage
+
+- Short demo of Langchain for a pdf file
+
+
+# About GPTs via OpenAI 
+
+::: {.callout-note}
+Brief Introduction to ChatGPT Advanced Data Analytics and about GPTs!
+:::
+
+"Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills."
+
+- [Scholar ai](https://scholarai.io/) - 
+
+- [Elicit](https://elicit.com/) - Analyze research papers
+
+- [Perplexity AI](https://www.perplexity.ai/) - Conversational search engine
+
+- ...
+
+# Other Resources
+
+- [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques. Especially the [hub page](https://www.promptingguide.ai/prompts) can be good to explore  
+
+- [OpenAI Cookbook](https://cookbook.openai.com/)
+
+- [OpenAI Prompt Examples](https://platform.openai.com/docs/examples)
+
+- [Prompting libraries & tools](https://cookbook.openai.com/articles/related_resources)
+
+- [Google Prompt Engineering page](https://developers.google.com/machine-learning/resources/prompt-eng)
+
+- [How to Use DALL-E 3: Tips, Examples, and Features](https://www.datacamp.com/tutorial/an-introduction-to-dalle3)
+
+- [Brex's Prompt Engineering Guide](https://github.com/brexhq/prompt-engineering)  Brex's introduction to language models and prompt engineering.
+
+---
+
+# Time to Reflect
+
+Please share your feedback to improve this training
+
+
+
+
+
+
