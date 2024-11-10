@@ -11,7 +11,7 @@ output-dir: docs
 
 # General Agenda
 
-Part 1: Introduction to Gen-AI
+**Part 1**: Introduction to Gen-AI
 
 -   Welcome and Overview
 -   What are Gen-AI Tools or LLMs?
@@ -20,7 +20,7 @@ Part 1: Introduction to Gen-AI
 
 ---
 
-Part 2: Techniques in Prompt Engineering
+**Part 2**: Techniques in Prompt Engineering
 
 - Basics and elements of Prompting.
 - Key Components of Prompt Engineering
@@ -30,10 +30,10 @@ Part 2: Techniques in Prompt Engineering
 
 ---
 
-Part 3: Exploring ChatGPT with Data Analytics
+**Part 3**: Exploring ChatGPT with Data Analytics
 
 - Brief Introduction to ChatGPT Plugins for Data Analytics
-- Some other plugins
+- Other useful plugins or tools 
 
 **Closing**
 
@@ -41,20 +41,20 @@ Part 3: Exploring ChatGPT with Data Analytics
 
 # A Little about me
 
-I am University Teacher in Statistics at the School of Mathematics, at the University of Edinburgh since 2022. Recently deserved my Fellowship of Higher Education Academics (FHEA) in 2023. 
+I am University Teacher in Statistics (Teaching Fellow - FHEA) at the School of Mathematics (SoM), at the University of Edinburgh since 2022.
 
-- As a member of teaching team in the school of Math
+- Beyond being a member teaching team in the SoM
   * TEMSE seminars co-organiser and Leading Gen-AI related discussions
-  
-- Being a part of EdinbR local group and RSS Edinburgh local group
+  * Being a part of EdinbR and RSS Edinburgh local group
+  * Contributing for Pair Programming club & CDCS 
 
 # Intersection of fields
 
-![](images/GenAI_Venn.png){fig-align="center" width=45%}
+![](images/AI_hiear_LLM.png){fig-align="center" width=65%}
 
 # Huge Public Interest
 
-![](images/GenAIstorm.png){fig-align="center" width=45%}
+![](images/GenAI_bubless.png){fig-align="center" width=45%}
 
 # Power behind it ?
 
@@ -63,9 +63,9 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 # Main advancement since 2017 ?
 
 ::: {layout-ncol=2}
-![Transformers](images/Enc_Deco.png){fig-align="center" width=40%}
+![](images/Enc_Deco.png){fig-align="center" width=50%}
 
-![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=40%}
+![Architecture](images/EncoDecod_Arch.png){fig-align="center" width=35%}
 :::
 
 ## Advantages and Limitations of Transformers
@@ -79,11 +79,13 @@ I am University Teacher in Statistics at the School of Mathematics, at the Unive
 * <span style="color: red;"> Excessive Parameterization</span>
 * <span style="color: red;"> Fixed Input Length and Inability to Handle Unstructured Inputs</span>
 
-# Modern LLMs traces
+# Importance of Attention ?
 
-![](images/LLMtrees.png){fig-align="center" width=50%}
+![](images/Transformers.png){fig-align="center" width=65%}
 
-Image Credit: [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
+# LLM tools landscape
+
+![](images/Interactive_LLMs.png){fig-align="center" width=55%}
 
 # What about ChatGPT ?
 
@@ -95,15 +97,12 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 - Limitations
   - Biases, Inappropriate or Unsafe Outputs, Inability to Fact-Check
 
-# Based vs Fine Tuned
-
-![](images/DeepL_LLMtypes.png){fig-align="center" width=50%}
 
 # ChatGPT structure
 
 ![](images/GPT_Deco.png){fig-align="center" width=50%}
 
-# Some LLM news!
+# Some LLM news - 2023!
 
 - Multimodality already for some!
 
@@ -115,15 +114,23 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 
 - Upcoming: "[Gemini](https://deepmind.google/technologies/gemini/#introduction) is built from the ground up for multimodality — reasoning seamlessly across text, images, video, audio, and code."
 
-- Interaction between different LLM agents, such as Microsoft [Autogen](https://www.microsoft.com/en-us/research/project/autogen/)
+# Some LLM news - 2024!
+
+- Different versions of GPT (including 4o, mini, o1-preview for advanced reasoning), lastly with GPT-4o with canvas
+
+- Voice option is working now for GPT and more recently introduced ChatGPTSearch
+
+- Claude 3.5 Sonnet, and Claude 3.5 Haiku - can direct Claude to use computers the way people do
+
+- Meta’s Next Llama AI Models Are Training on a GPU Cluster ‘Bigger Than Anything’ Else ?
+
+- Increase on the multi-agent frameworks for different applications!
 
 **What about available tools that we can play with ?**
 
 # Which tool we can use? 
 
 - OpenAI: **GPT-3.5** or recent version **GPT4** if you have paid membership
-  * There will be some examples from playground
-  * You will have some examples in a python code to play with
 
 - Google: **Bard** now, **Gemini** later. For [Bard](https://bard.google.com/chat) 
 
@@ -133,7 +140,9 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 
 - Mistral: Check out their [platform as open-source alternative](https://mistral.ai/product/)
 
-- Recently: [Microsoft Copilot](https://copilot.microsoft.com/) is available for university! announced as *Protected Mode for users from educational institutions*
+- [Microsoft Copilot](https://copilot.microsoft.com/) is available for university! announced as *Protected Mode for users from educational institutions*
+
+- *University ELM platform*: Edinburgh (access to) Language Models, via [ELM](https://www.ed.ac.uk/information-services/computing/comms-and-collab/elm)
 
 # Prompt Engineering
 
@@ -163,7 +172,7 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 
 - *Top P (Nucleus Sampling)*
   - **Low:** Yields exact, confident answers. Best for factual responses.
-  - **High:** Offers diverse outputs, considering less likely words. Great for varied responses.
+  - **High:** Offers diverse outputs, considering less likely words.
 
 ---
 
@@ -177,6 +186,11 @@ Only decoder type LLM indeed, but the output improvement relies on the concept o
 
 - *Presence Penalty*: Penalizes all repeated tokens equally. Prevents phrase repetition. Adjust for creativity or focus.
   
+---
+
+
+![](images/Nucleus_Sampling.png){fig-align="center" width=50%}
+
 ---
 
 ::: {.callout-note}
@@ -218,7 +232,7 @@ It is possible to use such elements when they are necessary to guide the LLM mor
 - **Output Indicator** the type or format of the output.
 
 ::: {.callout-warning}
-No need all the four elements for a prompt and the format depends on the task at hand.
+No need all the four elements for a prompt and the format depends on the task.
 :::
 
 # Some Examples 
@@ -233,11 +247,24 @@ No need all the four elements for a prompt and the format depends on the task at
 
 - [Code Generation](https://www.promptingguide.ai/introduction/examples#code-generation)
 
-::: {.callout-note}
-Prompt: Classify the text into neutral, negative or positive. 
-Text: I think the food was okay. 
-Sentiment: 
-:::
+---
+
+# ELM Use-cases
+
+[Examples](https://www.ed.ac.uk/information-services/computing/comms-and-collab/elm/getting-access-and-examples/examples-of-how-to-use-elm-with-prompts) demonstrating the application of ELM across different themes;
+
+- Code Writing
+- Writing a Literature Review
+- Summarising a material
+- Searching for academic information
+- Learning a subject
+- Developing Teaching Plans
+- Creating Assessments
+- Generating Research Ideas
+- Checking response to tutorial questions 
+- Create Templates
+
+---
 
 # OpenAI suggestions
 
@@ -399,29 +426,54 @@ Image Credit: [Langchain documentation](https://python.langchain.com/docs/use_ca
 
 ---
 
-Time to see some coding (if you are interested in more)
+There are some code-based examples (if you are interested)
 
 - Short notes and examples in Python
 
-- Short demo of Embedchain
+- Short demo of Embedchain for a webpage
 
-- Short demo of Langchain
+- Short demo of Langchain for a pdf file
 
-::: {.callout-note}
-Brief Introduction to ChatGPT Plugins for Data Analytics and about Plugins!
-:::
 
 ---
 
-# Resources on Prompting 
+# About GPTs via OpenAI 
 
-- [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques.
+::: {.callout-note}
+Brief Introduction to ChatGPT Advanced Data Analytics and about GPTs!
+:::
+
+"Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills."
+
+Other LLM related tools can be;
+
+- [Scholar ai](https://scholarai.io/) - 
+
+- [Elicit](https://elicit.com/) - Analyze research papers
+
+- [Perplexity AI](https://www.perplexity.ai/) - Conversational search engine
+
+- ...
+
+# Other Resources on Prompting 
+
+- [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques. Especially the [hub page](https://www.promptingguide.ai/prompts) can be good to explore  
 
 - [OpenAI Cookbook](https://cookbook.openai.com/)
 
-- [Brex's Prompt Engineering Guide](https://github.com/brexhq/prompt-engineering)  Brex's introduction to language models and prompt engineering.
+- [OpenAI Prompt Examples](https://platform.openai.com/docs/examples)
 
 - [Prompting libraries & tools](https://cookbook.openai.com/articles/related_resources)
+
+---
+
+- [Google Prompt Engineering page](https://developers.google.com/machine-learning/resources/prompt-eng)
+
+- [How to Use DALL-E 3: Tips, Examples, and Features](https://www.datacamp.com/tutorial/an-introduction-to-dalle3)
+
+- [Brex's Prompt Engineering Guide](https://github.com/brexhq/prompt-engineering)  Brex's introduction to language models and prompt engineering.
+
+---
 
 # Time to Reflect
 
