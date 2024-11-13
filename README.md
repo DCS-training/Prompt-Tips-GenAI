@@ -1,7 +1,7 @@
 # Prompt-Tips-GenAI
 This is the Efficient Prompting for Generative AI Tools training course material repository
 
-Check out training course slides: TBC
+Check out training course slides: [Efficient Prompting Training](https://dcs-training.github.io/Prompt-Tips-GenAI/Prompting_GENAI.html)
 
 ## General Structure 
 
